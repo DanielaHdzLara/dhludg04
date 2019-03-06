@@ -24,8 +24,8 @@ var server = app.listen(4000, function(){
 app.use(express.static('public'));
 
 // Socket setup & pass server
-//var io = require('socket.io').listen(server);
-var io = socket(server);
+var io = require('socket.io').listen(server);
+//var io = socket(server);
 io.on('connection', (socket) => {
 
     console.log('made socket connection', socket.id);
