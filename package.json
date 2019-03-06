@@ -13,7 +13,7 @@
   "author": "Daniela Lara",
   "license": "ISC",
   "engines": {
-    "node": "0.10.x"
+    "node": "*"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
