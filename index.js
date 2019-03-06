@@ -1,4 +1,5 @@
 var express = require('express');
+var socket = require('socket.io');
 
 // Heroku won't actually allow us to use WebSockets
 // so we have to setup polling instead.
@@ -9,8 +10,7 @@ var express = require('express');
 //});
 
 // App setup
-var app = express.createServer(express.logger());
-var socket = require('socket.io').listen(app);
+var app = express();
 var port = process.env.PORT || 5000;
 var server = app.listen(port, function(){
     console.log('listening for requests on port ' + port);
