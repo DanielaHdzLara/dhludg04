@@ -1,12 +1,11 @@
 var express = require('express');
 var socket = require('socket.io');
-var io=require('socket.io').listen(app);
 var port=process.env.PORT || 5000
 
 //Heroku no permite el uso de WebSockets, entonces se configuro polling.
-io.configure (function(){
-    io.set("transports", ["xhr-polling"]);
-    io.set("polling duration", 10);
+socket.configure (function(){
+    socket.set("transports", ["xhr-polling"]);
+    socket.set("polling duration", 10);
 });
 
 // App setup
