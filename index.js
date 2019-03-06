@@ -1,8 +1,6 @@
 var express = require('express');
-//var socket = require('socket.io');
-const socket = io({
-  transports: ['websocket']
-});
+var socket = require('socket.io');
+
 
 // Heroku won't actually allow us to use WebSockets
 // so we have to setup polling instead.
@@ -15,14 +13,18 @@ const socket = io({
 // App setup
 var app = express();
 var port = process.env.PORT || 5000;
-var server = app.listen(port, function(){
-    console.log('listening for requests on port ' + port);
-});
+var server = app.listen(4000, function(){
+    console.log('listening for requests on port 4000,');
+})
+//var server = app.listen(port, function(){
+//    console.log('listening for requests on port ' + port);
+//});
 
 // Static files
 app.use(express.static('public'));
 
 // Socket setup & pass server
+//var io = require('socket.io').listen(server);
 var io = socket(server);
 io.on('connection', (socket) => {
 
