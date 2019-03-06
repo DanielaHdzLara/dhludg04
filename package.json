@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+   "dependencies": {
+    "express": "*",
+    "socket.io": "*"
+  },
   "scripts": {
     "start": "node index.js"
   },
   "author": "Daniela Lara",
   "license": "ISC",
-  "dependencies": {
-    "express": "*",
-    "socket.io": "*"
-  },
   "engines": {
     "node": "0.10.x"
   },
