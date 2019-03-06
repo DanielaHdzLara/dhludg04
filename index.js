@@ -1,5 +1,8 @@
 var express = require('express');
-var socket = require('socket.io');
+//var socket = require('socket.io');
+const socket = io({
+  transports: ['websocket']
+});
 
 // Heroku won't actually allow us to use WebSockets
 // so we have to setup polling instead.
