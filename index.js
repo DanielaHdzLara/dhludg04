@@ -1,20 +1,11 @@
 var express = require('express');
-var app = express();
-var server = express()
-  .use(app)
-  .listen(PORT, () => console.log(`Listening Socket on ${ PORT }`));
-
 var socket = require('socket.io');
 
-
-//Heroku no permite el uso de WebSockets, entonces se configuro polling.
-//socket.configure (function() {
-//    socket.set("transports", ["xhr-polling"]);
-//    socket.set("polling duration", 10);
-//});
-
 // App setup
-
+var app = express();
+var server = app.listen(4000, function(){
+    console.log('listening for requests on port 4000,');
+});
 
 // Static files
 app.use(express.static('public'));
