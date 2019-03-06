@@ -13,7 +13,7 @@
     "socket.io": "*"
   },
   "engines": {
-    "node": "0.10.x""
+    "node": "0.10.x"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
