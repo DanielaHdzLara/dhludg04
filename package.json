@@ -9,8 +9,11 @@
   "author": "Daniela Lara",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "socket.io": "^2.2.0"
+    "express": "*",
+    "socket.io": "*"
+  },
+  "engines": {
+    "node": "0.10.x""
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
