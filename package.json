@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
    "dependencies": {
+    "express": "*",
     "socket.io": "*"
   },
   "scripts": {
